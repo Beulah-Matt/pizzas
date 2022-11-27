@@ -6,7 +6,13 @@ class RestaurantsController < ApplicationController
 
     def show
         restaurant = find_restaurant
-        render json: restaurant, serializer: SingleRestaurantSerializer
+        render json: restaurant, serializer: SingleRestaurantSerializer 
+    end
+
+    def destroy
+        restaurant = find_restaurant
+        restaurant.destroy
+        render json: restaurant, status: :no_content
     end
 
     private 
