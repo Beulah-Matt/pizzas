@@ -18,4 +18,11 @@ pizza1 = Pizza.create(name: "Cheese", ingredients: "Dough, Tomato Sauce, Cheese"
 pizza2 = Pizza.create(name: "Peperoni", ingredients: "Dough, Tomato Sauce, Cheese, Pepperoni")
 pizza3 = Pizza.create(name: "Something Meaty", ingredients: "Dough, Tomato Sauce, Cheese, Bacon, Steak and Chicken Strips")
 
+RestaurantPizza.create(restaurant_id: restaurant1.id, pizza_id: pizza1.id, price: 15)
+RestaurantPizza.create(restaurant_id: restaurant1.id, pizza_id: pizza2.id, price: 25)
+RestaurantPizza.create(restaurant_id: restaurant2.id, pizza_id: pizza1.id, price: 12)
+RestaurantPizza.create(restaurant_id: restaurant2.id, pizza_id: pizza3.id, price: 27)
+RestaurantPizza.create(restaurant_id: restaurant3.id, pizza_id: pizza3.id, price: 10)
+
+
 puts " ✅ Done seeding"

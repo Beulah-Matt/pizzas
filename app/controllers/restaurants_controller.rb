@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
 
     def show
         restaurant = find_restaurant
-        render json: restaurant
+        render json: restaurant, serializer: SingleRestaurantSerializer
     end
 
     private 
